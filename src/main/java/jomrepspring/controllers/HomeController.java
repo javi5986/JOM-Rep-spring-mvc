@@ -13,4 +13,8 @@ public class HomeController {
 		return "home";
 		// quiero ir a la pag home.html
 	}
+	
+	public void doNada() {
+		
+	}
 }
