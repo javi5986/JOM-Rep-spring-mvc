@@ -10,7 +10,7 @@ public class HomeController {
 	@GetMapping(value = "/")
 	public String home() {
 		
-		// quiero ir a la pag home.html
 		return "home";
+		// quiero ir a la pag home.html
 	}
 }
