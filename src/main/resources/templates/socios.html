@@ -14,24 +14,23 @@
 </head>
 
 <body>
-	<h1>Hello</h1>
-	
+	<h1>Socios</h1>
 	<table>
 		<!--titulos de la tabla-->
 		<tr>	
-			<th>
-				Col1
-			</th>		
+			<th>ID</th>		
+			<th>NOMBRE</th>
+			<th>APELLIDO</th>
+			<th>CODIGO</th>			
 		</tr>
-		
 		<!-- rows -->		
-		<tr th:each="cupon : ${list}">
-			<td th:text="${cupon}">
-				vacio
-			</td>
+		<tr th:each="socio : ${socios}">
+			<td th:text="${socio.id}"></td>
+			<td th:text="${socio.nombre}"></td>
+			<td th:text="${socio.apellido}"></td>
+			<td th:text="${socio.codigo}"></td>			
 		</tr>
 	</table>
-	<hr>
 </body>
 
 </html>
