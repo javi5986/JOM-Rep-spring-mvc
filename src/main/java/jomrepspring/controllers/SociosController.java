@@ -1,4 +1,5 @@
 package jomrepspring.controllers;
+
 import java.util.List;
 
 import javax.validation.Valid;
@@ -28,9 +29,11 @@ public class SociosController {
 	//http://localhost:8081/socio/all
 	@GetMapping("/all")
 	public String all(Model model) {
+//		if(true) throw new DuplicateKeyException("error",new Exception("probando cosas"));
+
 		List<Socios> socios = this.sociosService.buscarTodos();
 		model.addAttribute("socios", socios);
-		return "socios";
+		return "/socio/socios";
 	}
 	
 	@GetMapping("/delete") 

@@ -1,10 +1,11 @@
-package jomrepspring.domain;
+package jomrepspring.enums;
 
 public enum CuponViewsEnum {
 
 	LIST("/cupon/list"),
 	EDIT("/cupon/edit"),
-	NEW("/cupon/new")
+	NEW("/cupon/new"),
+	LIST_REDIRECT("redirect:/cupon/list"),
 	;
 	
 	private String view;
