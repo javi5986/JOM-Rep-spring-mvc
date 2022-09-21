@@ -1,5 +1,7 @@
 package jomrepspring.controllers;
 
+import java.util.Date;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.core.annotation.AnnotationUtils;
@@ -24,6 +26,12 @@ public class GlobalDefaultExceptionHandler {
 
 		// Otherwise setup and send the user to a default error-view.
 		ModelAndView mav = new ModelAndView();
+		mav.addObject("timestamp", new Date());
+		mav.addObject("path",req.getContextPath());
+		mav.addObject("error", e.getCause());
+		// mav.addObject("Status", ); VER STATUS
+		mav.addObject("message", e.getMessage());
+		mav.addObject("trace", e.getStackTrace());
 		mav.addObject("exception", e);
 		mav.addObject("url", req.getRequestURL());
 		mav.setViewName(DEFAULT_ERROR_VIEW);
