@@ -27,9 +27,17 @@
 </head>
 
 <body>
+	<div th:insert="navbar.html"></div>
 	<main>
-		<section class="container-fluid">
-			<h1>Socios</h1>
+		<section class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1>Socio</h1>
+					<a th:href="@{/socio/new}"
+						class="btn btn-primary">Nuevo
+					</a>
+				</div>
+			</div>
 			<table class="table">
 				<!--titulos de la tabla-->
 				<tr>	

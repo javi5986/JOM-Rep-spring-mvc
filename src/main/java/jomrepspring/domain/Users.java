@@ -31,8 +31,8 @@ public class Users {
 	//roles del usuario
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name="users_roles",
-		joinColumns = @JoinColumn(name="users_id"),
-		inverseJoinColumns = @JoinColumn(name="roles_id"))
+		joinColumns = @JoinColumn(name="user_id"),
+		inverseJoinColumns = @JoinColumn(name="role_id"))
 	private Set<Roles> roles;
 	
 	@ManyToOne
@@ -65,6 +65,18 @@ public class Users {
 
 	public String getUsername() {
 		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public void setRoles(Set<Roles> roles) {
+		this.roles = roles;
+	}
+
+	public void setCategory(UsersCategory category) {
+		this.category = category;
 	}
 
 }

@@ -1,5 +1,6 @@
 package jomrepspring.services;
 
+
 import java.util.List;
 import java.util.Optional;
 
@@ -21,7 +22,7 @@ public class SociosService {
 	}
 
 	public void eliminar(Long idSocios) {
-		this.repository.deleteById(idSocios);
+		this.repository.deleteById(idSocios);		
 	}
 
 	public Socios buscarSocio(Long id) {
@@ -32,5 +33,8 @@ public class SociosService {
 			return null;
 		}
 	}
-	
+
+	public void crear(Socios socio) {
+		this.repository.save(socio);
+	}
 }
