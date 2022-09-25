@@ -45,6 +45,7 @@ public class UsersController {
 	}
 	*/
 	
+
 	@GetMapping("/new")
 	public ModelAndView newCupon() {
 		
@@ -53,7 +54,11 @@ public class UsersController {
 		
 		ModelAndView model = new ModelAndView("/user/new");
 		
+		//cargar las cateogorias desde la db usando el service
+		//List<Cate> 
+		
 		model.addObject("USER", entity);
+		//model.addObject("categorias", list);
 		
 		return model;
 	}
