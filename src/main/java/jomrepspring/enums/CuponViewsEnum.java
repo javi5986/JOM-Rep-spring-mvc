@@ -2,9 +2,9 @@ package jomrepspring.enums;
 
 public enum CuponViewsEnum {
 
-	LIST("/cupon/list"),
-	EDIT("/cupon/edit"),
-	NEW("/cupon/new"),
+	LIST("cupon/list"),
+	EDIT("cupon/edit"),
+	NEW("cupon/new"),
 	LIST_REDIRECT("redirect:/cupon/list"),
 	;
 	
